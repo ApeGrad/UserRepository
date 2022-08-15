@@ -1,4 +1,4 @@
-package Test;
+package Lesson8.Test;
 
 import Lesson8.Exceptions.CreateException;
 import Lesson8.Model.User;

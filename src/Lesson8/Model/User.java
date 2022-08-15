@@ -1,4 +1,4 @@
-package Model;
+package Lesson8.Model;
 
 public class User {
     protected String login;

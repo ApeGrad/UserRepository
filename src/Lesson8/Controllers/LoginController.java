@@ -1,4 +1,4 @@
-package Controllers;
+package Lesson8.Controllers;
 
 import Lesson8.Exceptions.NotFoundException;
 import Lesson8.Model.User;

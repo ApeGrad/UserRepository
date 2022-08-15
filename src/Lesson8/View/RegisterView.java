@@ -1,4 +1,4 @@
-package View;
+package Lesson8.View;
 
 import Lesson8.Controllers.RegistrationController;
 import Lesson8.Exceptions.RegistrationException;

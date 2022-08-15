@@ -1,4 +1,4 @@
-package View;
+package Lesson8.View;
 
 import Lesson8.Model.User;
 

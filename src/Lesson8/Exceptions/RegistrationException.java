@@ -1,4 +1,4 @@
-package Exceptions;
+package Lesson8.Exceptions;
 
 public class RegistrationException extends Exception {
     public static final String MESSAGE_INVALID_LOGIN =  "Invalid login";
