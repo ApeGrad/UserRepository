@@ -1,7 +1,4 @@
 package Lesson8.View;
-
-import Lesson8.Main;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -17,14 +14,6 @@ public class SimpleAskView {
         this.question = question;
 
     }
-
-
-    public static void main(String[] args) {
-        run();
-
-
-    }
-
     public static void run(){
         LIST.add("YES");
         LIST.add("yes");
@@ -47,13 +36,16 @@ public class SimpleAskView {
                     System.out.println("Ok, have a nice day");
                     break;
                 }
+                if(i==2) {
+                    if (!LIST.contains(answer))
+                        System.out.println("ERROR: unexpected answer");
+                    break;
+                }
                 else {
                     System.out.println("Wrong");
 
                 }
             }
         }
-
-
     }
 }

@@ -1,5 +1,4 @@
 package Lesson8.View;
-
 import java.util.Scanner;
 
 public class StartMenu   {
@@ -32,9 +31,5 @@ public class StartMenu   {
                     break;
             }
         }
-
-
-
-
     }
 }
