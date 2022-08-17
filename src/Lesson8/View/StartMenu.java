@@ -18,8 +18,8 @@ public class StartMenu   {
         }
         boolean variable = true;
         while(variable) {
-            int answer = SCANNER.nextInt();
             System.out.println("1 - login, 2 - register, 3 - exit");
+            int answer = SCANNER.nextInt();
             switch (answer) {
                 case 1:
                     LoginView.run();
