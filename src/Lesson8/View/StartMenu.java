@@ -1,22 +1,24 @@
 package Lesson8.View;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
-public class StartMenu   {
+public class StartMenu {
     private final static Scanner SCANNER = new Scanner(System.in);
 
-    public static void run(){
-        System.out.println("Hello!");
-        System.out.println("Do you have an account?");
-        System.out.println("1 - yes, 2 - no");
-        boolean isCorrectAnswer = SCANNER.hasNextInt();
-        while(!isCorrectAnswer){
-            SCANNER.nextLine();
-            System.out.println("Wrong action");
-            System.out.println("1 - yes, 2 - no");
-            isCorrectAnswer = SCANNER.hasNextInt();
+    public static void run() {
+        SimpleAskView simpleAskView = new SimpleAskView("Hello!\nDo you have an account?\nYes/no?");
+        SimpleAskView.run();
+        if (simpleAskView.LIST2.contains(SimpleAskView.answer)) {
+            RegisterView.run();
+
+        } else if (simpleAskView.LIST.contains(SimpleAskView.answer)) {
+            LoginView.run();
         }
         boolean variable = true;
-        while(variable) {
+        while (variable) {
             System.out.println("1 - login, 2 - register, 3 - exit");
             int answer = SCANNER.nextInt();
             switch (answer) {
@@ -27,9 +29,16 @@ public class StartMenu   {
                     RegisterView.run();
                     break;
                 case 3:
-                    variable = false;
-                    break;
+                    SimpleAskView simpleAskView1 = new SimpleAskView("Do you really want to exit?\ny/n");
+                    SimpleAskView.run();
+                    if (simpleAskView1.LIST2.contains(SimpleAskView.answer)) {
+                        variable = true;
+                    } else if (simpleAskView1.LIST.contains(SimpleAskView.answer)) {
+                        variable = false;
+                        break;
+                    }
             }
         }
     }
 }
+

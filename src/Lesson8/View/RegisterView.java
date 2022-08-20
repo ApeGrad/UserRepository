@@ -25,21 +25,20 @@ public class RegisterView {
             try {
                User user =  controller.register(login, password, password2);
                 System.out.println("User: " + user.getLogin() + " has created " );
-//               MainMenu.run(user);
                break;
             } catch (RegistrationException e) {
                 System.out.println("ERROR: " + e.getMessage());
-                System.out.println("Do you want to  try again?");
-                System.out.println("1 - yes");
-                System.out.println("2 - no");
+                SimpleAskView simpleAskView = new SimpleAskView("Do you want to try again?\n y/n");
+                SimpleAskView.run();
+                if(simpleAskView.LIST.contains(SimpleAskView.answer)){
 
-                int answer = SCANNER.nextInt();
-                if(answer == 1){
-
-                } else if (answer == 2) {
+                } else if (simpleAskView.LIST2.contains(SimpleAskView.answer)) {
                     break;
-                } else {
-                    throw new IllegalArgumentException("Unsupported  operation: " + answer);
+
+                }
+
+                 else {
+                    throw new IllegalArgumentException("Unsupported  operation: " );//+ //answer);
                 }
 
             }
